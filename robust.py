@@ -1,5 +1,5 @@
 import sys
-from pcst_approach.utils.ppi import PpiInstance, read_terminals, UnitEdgeWeight, CoVexEdgeWeight, BiasAwareEdgeWeight_Additive, BiasAwareEdgeWeight_Exponential, read_ppi, read_ppi_biasaware
+from pcst_approach.utils.ppi import PpiInstance, read_terminals, UnitEdgeWeight, CoVexEdgeWeight, BiasAwareEdgeWeight_Additive, BiasAwareEdgeWeight_Exponential, read_ppi, read_ppi_biasaware, BiasAwareEdgeWeight_AdditiveMax, BiasAwareEdgeWeight_ExponentialMax
 from pcst_approach.utils import ExpMinMaxDiverseSteinerTreeComputer
 import argparse
 
@@ -54,9 +54,9 @@ def call_robust(path_to_graph, edge_cost_mode, node_namespace_mode, normalize_mo
         edge_weights = UnitEdgeWeight()
     else:
         if edge_cost_mode=='ADDITIVE':
-            edge_weights = BiasAwareEdgeWeight_Additive(graph, lambda_)
+            edge_weights = BiasAwareEdgeWeight_AdditiveMax(graph, lambda_)
         elif edge_cost_mode=='EXPONENTIAL':
-            edge_weights = BiasAwareEdgeWeight_Exponential(graph, lambda_)
+            edge_weights = BiasAwareEdgeWeight_ExponentialMax(graph, lambda_)
             
         
     ppi_instance = PpiInstance(graph, terminals, edge_weights)
