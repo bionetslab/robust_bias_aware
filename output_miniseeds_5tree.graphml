@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d4" for="node" attr.name="connected_components_id" attr.type="long"/>
+<key id="d3" for="node" attr.name="trees" attr.type="string"/>
+<key id="d2" for="node" attr.name="nrOfOccurrences" attr.type="long"/>
+<key id="d1" for="node" attr.name="significance" attr.type="double"/>
+<key id="d0" for="node" attr.name="isSeed" attr.type="boolean"/>
+<graph edgedefault="undirected"><node id="P48283">
+  <data key="d0">True</data>
+  <data key="d1">1.0</data>
+  <data key="d2">1</data>
+  <data key="d3">0</data>
+  <data key="d4">0</data>
+</node>
+<node id="Q12772">
+  <data key="d0">False</data>
+  <data key="d1">1.0</data>
+  <data key="d2">1</data>
+  <data key="d3">0</data>
+  <data key="d4">0</data>
+</node>
+<node id="Q9Y6R1">
+  <data key="d0">True</data>
+  <data key="d1">1.0</data>
+  <data key="d2">1</data>
+  <data key="d3">0</data>
+  <data key="d4">0</data>
+</node>
+<node id="Q5NIE2">
+  <data key="d0">True</data>
+  <data key="d1">1.0</data>
+  <data key="d2">1</data>
+  <data key="d3">0</data>
+  <data key="d4">0</data>
+</node>
+<node id="Q9Y6X2">
+  <data key="d0">True</data>
+  <data key="d1">1.0</data>
+  <data key="d2">1</data>
+  <data key="d3">0</data>
+  <data key="d4">0</data>
+</node>
+<node id="Q81Z39">
+  <data key="d0">True</data>
+  <data key="d1">1.0</data>
+  <data key="d2">1</data>
+  <data key="d3">0</data>
+  <data key="d4">0</data>
+</node>
+<edge source="P48283" target="Q9Y6R1"/>
+<edge source="Q12772" target="Q9Y6R1"/>
+<edge source="Q12772" target="Q9Y6X2"/>
+<edge source="Q9Y6R1" target="Q5NIE2"/>
+<edge source="Q9Y6X2" target="Q81Z39"/>
+</graph></graphml>

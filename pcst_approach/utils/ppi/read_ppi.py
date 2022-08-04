@@ -10,7 +10,7 @@ def read_ppi_biasaware(file_path: str, pathToStudyBiasData: str, flag: int):
     with open(file_path, "r") as file:
         file.readline()
         for line in file:
-            parsed_line = line.split('\t')
+            parsed_line = line.split(',')
             v = parsed_line[0].strip()
             w = parsed_line[1].strip()
             vertices.add(v)
@@ -81,7 +81,7 @@ def read_ppi(file_path: str):
     with open(file_path, "r") as file:
         file.readline()
         for line in file:
-            parsed_line = line.split('\t')
+            parsed_line = line.split(',')
             v = parsed_line[0].strip()
             w = parsed_line[1].strip()
             vertices.add(v)

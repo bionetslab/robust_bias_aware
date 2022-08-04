@@ -64,7 +64,7 @@ class BiasAwareEdgeWeight_AdditiveMax:
         biases = nx.get_node_attributes(self.graph, 'bias_data')
         sum_=0
         for u, v in self.graph.edges:
-            sum_ = sum_ + max(biases[u] + biases[v])
+            sum_ = sum_ + max(biases[u], biases[v])
         return sum_ / self.graph.number_of_edges()
     
     def __getitem__(self, e):
