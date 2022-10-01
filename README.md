@@ -1,6 +1,6 @@
 # Installation
 
-Install conda environment as follows (there also exists a environment.yml but it contains more packages than necessary)
+Install conda environment as follows (there also exists an environment.yml file, but it contains more packages than necessary)
 ```bash
 conda create --name biosteiner python=3.7
 conda activate biosteiner
@@ -8,32 +8,28 @@ conda install numpy matplotlib pandas networkx pip jupyter
 pip install pcst_fast
 ```
 
-# Running ROBUST-2.00
+# Running ROBUST
 
-You can simply run robust-2.00 by calling
+You can simply run ROBUST by calling
 ```bash
-python robust.py data/human_annotated_PPIs_brain.txt data/ms_seeds.txt ms.graphml
+python3 robust/robust.py robust/data/seeds/GENE_SYMBOL/30_ms_seeds.txt
 ```
 The positional arguments are:
 ```
-[1] file providing the network in the form of an edgelist 
-    (tab-separated table, columns 1 & 2 will be used)
-[2] file with the seed genes (if table contains more than 
-    one column they must be tab-separated; the first column 
-    will be used only)
-[3] path to output file
+[1] file containing the list of seed genes/ proteins
+[2] path to output file
 ```
 
 The optional arguments are:
 ```
---initial_fraction INITIAL_FRACTION							Description: initial fraction for ROBUST, type=float, expected range=[0,1], default: 0.25
---reduction_factor REDUCTION_FACTOR							Description: reduction factor for ROBUST, type=float, expected range=[0,1], default: 0.90
---number_of_steiner_trees NO_OF_STEINER_TREES						Description: # of steiner trees for ROBUST, type=int, expected range=(0,+inf], default: 30
---threshold THRESHOLD									Description: threshold value for ROBUST, type=float, expected range=(0,+inf], default: 0.1
---node_namespace {'ENTREZ_GENE_ID', 'GENE_SYMBOL', 'UNIPROT_PROTEIN_ID'}		Description: gene/ protein identifier options for study bias data, type=str, default: 'GENE_SYMBOL'
---edge_cost {'UNIFORM', 'ADDITIVE', 'EXPONENTIAL'}					Description: function for calculating edge costs, type=str, default: UNIFORM
---normalize {'BAIT_USAGE', 'STUDY_ATTENTION', 'CUSTOM'}					Description: study bias data options to be used for normalization, type=str, default: 'BAIT_USAGE'
---lambda										Description: lambda value for ROBUST-version-2.00, type=float, expected range=[0,1], default: 0.50
+--network NETWORK	Description: specify input network to run ROBUST on, type: string, default: 'BioGRID'. Options include: in-built network ('BioGRID', 'APID', 'HPRD', 'STRING') or file_path (.graphml, .txt, .csv, .tsv)
+--namespace {'ENTREZ', 'GENE_SYMBOL', 'UNIPROT'}		Description: gene/ protein identifier options for network and study bias data, type=str, default: 'GENE_SYMBOL'
+--alpha INITIAL_FRACTION							Description: initial fraction for ROBUST, type=float, expected range=[0,1], default: 0.25
+--beta REDUCTION_FACTOR							Description: reduction factor for ROBUST, type=float, expected range=[0,1], default: 0.90
+--n NO_OF_STEINER_TREES						Description: # of steiner trees for ROBUST, type=int, expected range=(0,+inf], default: 30
+--tau THRESHOLD									Description: threshold value for ROBUST, type=float, expected range=(0,1], default: 0.1
+--study-bias-scores							Description: edge weight function used by ROBUST, type=str, default: 'NONE'. Options include: in-built options ('NONE'/'None', 'BAIT_USAGE', 'STUDY_ATTENTION') or file_path (.graphml, .txt, .csv, .tsv)
+--gamma										Description: study bias data regulator, type=float, expected range=[0,1], default: 1.00
 ```
 
 The suffix of the path to the output file you specify, determine the format of the output.
