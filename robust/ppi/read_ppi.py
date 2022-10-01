@@ -6,7 +6,6 @@ def add_study_bias_scores_to_network(path_to_study_bias_scores: str, network: nx
     """
     Reads the PPI-graph from file without any attributes such as weight.
     """
-
     study_bias_scores = pd.read_csv(path_to_study_bias_scores)
     # print(study_bias_scores)
     study_bias_dict = { study_bias_scores.loc[i, 'gene_or_protein']: study_bias_scores.loc[i, 'study_bias_score'] for i in range(study_bias_scores.shape[0]) }
@@ -22,7 +21,7 @@ def read_ppi_network(network: str, flag):
     Reads the PPI-graph from file without any attributes such as weight.
     """
     if flag==1:
-        _network=network
+        return network
     else:
         vertices = set()
         edges = []
