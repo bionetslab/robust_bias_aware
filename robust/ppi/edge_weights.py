@@ -24,7 +24,6 @@ class BiasAwareEdgeWeight:
         sum_ = 0
         for u, v in self._graph.edges:
             sum_ = sum_ + max(biases[u], biases[v])
-            # sum_ = sum_ + max(biases[u], biases[v])
         return sum_ / self._graph.number_of_edges()
     
     def __getitem__(self, e):
