@@ -16,15 +16,18 @@ python robust.py data/data-example1-prec-puberty/BioGRID.txt data/data-example1-
 ```
 The positional arguments are:
 ```
-[1] file providing the network:
-	
-	Input options:
-	- A two-column edgelist. File types and corresponding separators are as follows: 1. '.txt' file should be space-separated 2. '.tsv' file should be tab-separated 3. '.csv' file should be comma-separated. No other file  formats except '.txt', '.csv' and '.tsv' are accepted at the moment.
-	- A valid .graphml file
-	- In-built network name {'BioGRID', 'APID', 'HPRD', 'STRING'}
-[2] file with a list of seed genes (separator: newline-separated)
-[3] path to output file
+[1] file with a list of seed genes (separator: newline-separated)
+[2] path to output file (supported output file types: .graphml, .csv, others) [read more below]
+
+
+The suffix of the path to the output file you specify, determine the format of the output.
+You can either choose
+- .graphml: A .graphml file is written that contains the following vertex properties: isSeed, significance, nrOfOccurrences, connected_components_id, trees
+- .csv: A .csv file which contains a vertex table with #occurrences, %occurrences, terminal (isSeed) 
+- everything else: An edge list
 ```
+
+
 
 The optional arguments are:
 ```
@@ -36,13 +39,22 @@ The optional arguments are:
 --edge_cost {'UNIFORM', 'ADDITIVE', 'EXPONENTIAL'}					Description: function for calculating edge costs, type=str, default: UNIFORM
 --normalize {'BAIT_USAGE', 'STUDY_ATTENTION', 'CUSTOM'}					Description: study bias data options to be used for normalization, type=str, default: 'BAIT_USAGE'
 --lambda										Description: lambda value for ROBUST-version-2.00, type=float, expected range=[0,1], default: 0.50
+
+
+
+
+[1] file providing the network:
+	
+	Input options:
+	- A two-column edgelist. File types and corresponding separators are as follows: 1. '.txt' file should be space-separated 2. '.tsv' file should be tab-separated 3. '.csv' file should be comma-separated. No other file  formats except '.txt', '.csv' and '.tsv' are accepted at the moment.
+	- A valid .graphml file
+	- In-built network name {'BioGRID', 'APID', 'HPRD', 'STRING'}
+
+
+
+
 ```
 
-The suffix of the path to the output file you specify, determine the format of the output.
-You can either choose
-- .graphml: A .graphml file is written that contains the following vertex properties: isSeed, significance, nrOfOccurrences, connected_components_id, trees
-- .csv: A .csv file which contains a vertex table with #occurrences, %occurrences, terminal (isSeed) 
-- everything else: An edge list
 
 # Evaluating ROBUST
 
