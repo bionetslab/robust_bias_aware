@@ -16,6 +16,7 @@ python robust.py data/data-example1-prec-puberty/BioGRID.txt data/data-example1-
 ```
 The positional arguments are:
 ```
+
 [1] file with a list of seed genes (separator: newline-separated)
 [2] path to output file (supported output file types: .graphml, .csv, others) [read more below]
 
@@ -25,12 +26,16 @@ You can either choose
 - .graphml: A .graphml file is written that contains the following vertex properties: isSeed, significance, nrOfOccurrences, connected_components_id, trees
 - .csv: A .csv file which contains a vertex table with #occurrences, %occurrences, terminal (isSeed) 
 - everything else: An edge list
+
 ```
 
 
 
 The optional arguments are:
 ```
+
+
+
 --initial_fraction INITIAL_FRACTION							Description: initial fraction for ROBUST, type=float, expected range=[0,1], default: 0.25
 --reduction_factor REDUCTION_FACTOR							Description: reduction factor for ROBUST, type=float, expected range=[0,1], default: 0.90
 --number_of_steiner_trees NO_OF_STEINER_TREES						Description: # of steiner trees for ROBUST, type=int, expected range=(0,+inf], default: 30
