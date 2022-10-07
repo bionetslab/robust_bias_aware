@@ -22,6 +22,7 @@ The positional arguments are:
 	- A two-column edgelist. File types and corresponding separators are as follows: 1. '.txt' file should be space-separated 2. '.tsv' file should be tab-separated 3. '.csv' file should be comma-separated. No other file  formats except '.txt', '.csv' and '.tsv' are accepted at the moment.
 	- A valid .graphml file
 	- In-built network name {'BioGRID', 'APID', 'HPRD', 'STRING'}
+[2] file with a list of seed genes (separator: newline-separated)
 [3] path to output file
 ```
 
