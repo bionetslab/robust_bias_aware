@@ -42,13 +42,13 @@ Network input options:
 	- In-built network name {'BioGRID', 'APID', 'HPRD', 'STRING'}
 
 
-[2] --alpha ALPHA								Description: initial fraction for ROBUST, type=float, expected range=[0,1], default: 0.25
+[2] --alpha ALPHA							Description: initial fraction for ROBUST, type=float, expected range=[0,1], default: 0.25
 
-[3] --beta BETA									Description: reduction factor for ROBUST, type=float, expected range=[0,1], default: 0.90
+[3] --beta BETA								Description: reduction factor for ROBUST, type=float, expected range=[0,1], default: 0.90
 
-[4] --n N										Description: # of steiner trees for ROBUST, type=int, expected range=(0,+inf], default: 30
+[4] --n N									Description: # of steiner trees for ROBUST, type=int, expected range=(0,+inf], default: 30
 
-[5] --tau TAU									Description: threshold value for ROBUST, type=float, expected range=(0,+inf], default: 0.1
+[5] --tau TAU								Description: threshold value for ROBUST, type=float, expected range=(0,+inf], default: 0.1
 
 [6] --namespace {'ENTREZ', 'GENE_SYMBOL', 'UNIPROT'}		Description: gene/ protein identifier options for study bias data, type=str, default: 'GENE_SYMBOL'
 
