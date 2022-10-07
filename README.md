@@ -50,15 +50,15 @@ Network input options:
 
 [5] --tau TAU						Description: threshold value for ROBUST, type=float, expected range=(0,+inf], default: 0.1
 
-[6] --namespace {'ENTREZ', 'GENE_SYMBOL', 'UNIPROT'}		Description: gene/ protein identifier options for study bias data, type=str, default: 'GENE_SYMBOL'
+[6] --namespace {'ENTREZ', 'GENE_SYMBOL', 'UNIPROT'}Description: gene/ protein identifier options for study bias data, type=str, default: 'GENE_SYMBOL'
 
-[7] --study-bias-scores							Description: specify edge weight function used by ROBUST, type=str, default: 'BAIT_USAGE' [read more below]
+[7] --study-bias-scores					Description: specify edge weight function used by ROBUST, type=str, default: 'BAIT_USAGE' [read more below]
 
 Study bias score input options:
 	- A two-column file (delimiter: comma), where the first column is the gene or protein name (column datatype: string) and the second column is the study bias score (column datatype: int).
 	- In-built study-bias-score options {'NONE' or 'None', 'BAIT_USAGE', 'STUDY_ATTENTION'} ('NONE' or 'None' leads to running ROBUST with uniform edge costs.)
 
---gamma											Description: Hyper-parameter gamma used by bias-aware edge weights. This hyperparameter regulates to what extent the study bias data is being leveraged when running ROBUST., type=float, expected range=[0,1], default: 1.00
+--gamma										Description: Hyper-parameter gamma used by bias-aware edge weights. This hyperparameter regulates to what extent the study bias data is being leveraged when running ROBUST., type=float, expected range=[0,1], default: 1.00
 ```
 
 
