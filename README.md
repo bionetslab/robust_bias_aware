@@ -58,6 +58,7 @@ Study bias score input options:
 	- A two-column file (delimiter: comma), where the first column is the gene or protein name (column datatype: string) and the second column is the study bias score (column datatype: int).
 	- In-built study-bias-score options {'NONE' or 'None', 'BAIT_USAGE', 'STUDY_ATTENTION'} ('NONE' or 'None' leads to running ROBUST with uniform edge costs.)
 
+
 --gamma							Description: Hyper-parameter gamma used by bias-aware edge weights. This hyperparameter regulates to what extent the study bias data is being leveraged when running ROBUST., type=float, expected range=[0,1], default: 1.00
 ```
 
