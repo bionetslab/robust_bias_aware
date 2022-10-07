@@ -34,7 +34,7 @@ You can either choose
 The optional arguments are:
 ```
 
-[1] --network NETWORK							Description: Specify path to graph or identifier of networks shipped with ROBUST ('BioGRID', 'APID', 'HPRD', 'STRING'), type=str or file (allowed types: .graphml, .txt, .csv, .tsv), default: 'BioGRID' [read more below]
+[1] --network NETWORK					Description: Specify path to graph or identifier of networks shipped with ROBUST ('BioGRID', 'APID', 'HPRD', 'STRING'), type=str or file (allowed types: .graphml, .txt, .csv, .tsv), default: 'BioGRID' [read more below]
 
 Network input options:
 	- A two-column edgelist. File types and corresponding delimiters are as follows: 1. '.txt' file should be space-separated 2. '.tsv' file should be tab-separated 3. '.csv' file should be comma-separated. No other file  formats except '.txt', '.csv' and '.tsv' are accepted at the moment.
@@ -42,13 +42,13 @@ Network input options:
 	- In-built network name {'BioGRID', 'APID', 'HPRD', 'STRING'}
 
 
-[2] --alpha ALPHA							Description: initial fraction for ROBUST, type=float, expected range=[0,1], default: 0.25
+[2] --alpha ALPHA					Description: initial fraction for ROBUST, type=float, expected range=[0,1], default: 0.25
 
-[3] --beta BETA								Description: reduction factor for ROBUST, type=float, expected range=[0,1], default: 0.90
+[3] --beta BETA						Description: reduction factor for ROBUST, type=float, expected range=[0,1], default: 0.90
 
-[4] --n N									Description: # of steiner trees for ROBUST, type=int, expected range=(0,+inf], default: 30
+[4] --n N						Description: # of steiner trees for ROBUST, type=int, expected range=(0,+inf], default: 30
 
-[5] --tau TAU								Description: threshold value for ROBUST, type=float, expected range=(0,+inf], default: 0.1
+[5] --tau TAU						Description: threshold value for ROBUST, type=float, expected range=(0,+inf], default: 0.1
 
 [6] --namespace {'ENTREZ', 'GENE_SYMBOL', 'UNIPROT'}		Description: gene/ protein identifier options for study bias data, type=str, default: 'GENE_SYMBOL'
 
