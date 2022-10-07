@@ -12,7 +12,7 @@ def _get_parser():
     parser.add_argument('--beta', default=0.9, type=float, help='specify reduction factor, default=0.9')
     parser.add_argument('--n', default=30, type=int, help='specify no. of steiner trees')
     parser.add_argument('--tau', default=0.1, type=float, help='specify threshold')
-    parser.add_argument('--study-bias-scores', type=str, default='NONE', help='specify edge weight function used by ROBUST')
+    parser.add_argument('--study-bias-scores', type=str, default='BAIT_USAGE', help='specify edge weight function used by ROBUST')
     parser.add_argument('--gamma', type=float, default=1.0, help='hyper-parameter gamma used by bias-aware edge weights.')
     return parser
 
