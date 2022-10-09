@@ -1,3 +1,8 @@
+# GitHub-specific files to be ignored:
+.DS_Store
+.git/
+.gitmodules
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -127,8 +132,3 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
-
-# Mac-specific files
-.DS_Store
-*.DS_Store
-/.DS_Store
