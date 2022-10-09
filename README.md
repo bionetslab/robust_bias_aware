@@ -12,7 +12,7 @@ pip install pcst_fast
 
 You can simply run robust by calling
 ```bash
-python robust.py data/data-example1-prec-puberty/BioGRID.txt data/data-example1-prec-puberty/prec-pub-seeds.txt prec_puberty.graphml
+python3 robust.py data/data-example1-prec-puberty/BioGRID.txt data/data-example1-prec-puberty/prec-pub-seeds.txt prec_puberty.graphml
 ```
 The positional arguments are:
 ```
@@ -28,9 +28,6 @@ You can either choose
 - everything else: An edge list
 
 ```
-
-
-
 The optional arguments are:
 ```
 
@@ -60,6 +57,16 @@ Study bias score input options:
 
 
 --gamma							Description: Hyper-parameter gamma used by bias-aware edge weights. This hyperparameter regulates to what extent the study bias data is being leveraged when running ROBUST., type=float, expected range=[0,1], default: 1.00
+```
+
+# Updating in-built PPI networks
+```bash
+python3 ./data/networks/update_inbuilt_ppi_networks.py
+```
+
+# Updating study bias scores
+```bash
+python3 ./data/study_bias_scores/update_inbuilt_study_bias_scores.py
 ```
 
 
