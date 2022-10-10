@@ -64,7 +64,7 @@ def update_study_bias_scores():
     # ######################################################## Bait usage generation code: ########################################################
     # #########################*****************************************************************************************************#########################
 
-    intact_human = pd.read_table('intact_human.txt')
+    intact_human = pd.read_table('intact_human.txt', low_memory=False)
     # print(len(intact_human))
 
     # intact_human_unique = pd.DataFrame(intact_human,columns = ['ID(s) interactor A','ID(s) interactor B'])
@@ -91,7 +91,7 @@ def update_study_bias_scores():
       #table_a['ID(s) interactor A'].unique()
       table_b = intact_human[(intact_human['Experimental role(s) interactor B'] == 'bait') & (intact_human['ID(s) interactor B'] == b)]
       pubmed_b = table_b['Publication Identifier(s)'].unique()
-      pubmed = np.union1d(pubmed_a,pubmed_b) # already unique values
+      pubmed = np.union1d(str(pubmed_a),str(pubmed_b)) # already unique values
       bait_uniprot.append(b)
       bait_usage.append(len(pubmed))
       query = mg.query(b,scopes='uniprot',species=9606,fields='symbol',returnall=True)
