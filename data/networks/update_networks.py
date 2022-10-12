@@ -22,10 +22,11 @@ def update_networks():
     BioGRID = ndex2.create_nice_cx_from_raw_cx(json.loads(BioGRID.content))
     BioGRID = BioGRID.to_networkx(mode='default')
 
-    # (3) HPRD:
-    HPRD = client.get_network_as_cx_stream('1093e665-86da-11e7-a10d-0ac135e8bacf')
-    HPRD = ndex2.create_nice_cx_from_raw_cx(json.loads(HPRD.content))
-    HPRD = HPRD.to_networkx(mode='default')
+    # HPRD removed because this dataset is not regularly maintained.
+    # # (3) HPRD:
+    # HPRD = client.get_network_as_cx_stream('1093e665-86da-11e7-a10d-0ac135e8bacf')
+    # HPRD = ndex2.create_nice_cx_from_raw_cx(json.loads(HPRD.content))
+    # HPRD = HPRD.to_networkx(mode='default')
 
     # 'STRING' often throws network errors (especially at line 'ndex2.create_nice_cx_from_raw_cx')-this is an ndex server issue.
     # That is why this dataset has been run in try-catch blocks of upto 3 failed attempts.
