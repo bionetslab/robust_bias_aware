@@ -95,7 +95,7 @@ def _check_and_preprocess_network(network, namespace):
         if network.endswith('.graphml'):
             is_graphml=1
             network=nx.read_graphml(network)
-        elif network in ['BioGRID', 'APID', 'HPRD', 'STRING']:
+        elif network in ['BioGRID', 'APID', 'STRING']:
             network = f'robust_bias_aware/data/networks/{namespace}/{network}.txt'
         elif (network.endswith('.txt') or network.endswith('.csv') or network.endswith('.tsv')):
             if not os.path.exists(network):
