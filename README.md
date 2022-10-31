@@ -77,4 +77,4 @@ For a large-scale empirical evaluation of ROBUST, please follow the instructions
 # Citing ROBUST
 
 Please cite ROBUST as follows:
-- **citation will be added once available**
+- J. Bernett et al., "Robust disease module mining via enumeration of diverse prize-collecting Steiner trees," Bioinformatics, vol. 38, no. 6, pp. 1600–1606, 2022, doi: 10.1093/bioinformatics/btab876.
