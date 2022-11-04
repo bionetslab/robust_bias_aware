@@ -7,6 +7,7 @@ conda activate robust
 conda install numpy matplotlib pandas networkx pip jupyter
 pip install pcst_fast
 ```
+Note that Python 3.7 is a hard requirement!
 
 # Running ROBUST
 
