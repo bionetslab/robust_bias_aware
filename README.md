@@ -11,9 +11,9 @@ Note that Python 3.7 is a hard requirement!
 
 # Running ROBUST
 
-You can simply run robust by calling
+Navigate to home path '/robust_bias_aware', then You can simply run robust by calling 
 ```bash
-python3 robust.py data/data-example1-prec-puberty/BioGRID.txt data/data-example1-prec-puberty/prec-pub-seeds.txt prec_puberty.graphml
+python3 robust.py ./data/data-case-study-2-prec-puberty/prec-pub-seeds.txt prec_puberty.graphml
 ```
 The positional arguments are:
 ```
