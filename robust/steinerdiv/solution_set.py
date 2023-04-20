@@ -63,7 +63,7 @@ class SolutionSet(list):
         return pd.DataFrame(data).sort_values(["#occurrences"], ascending=False,
                                               kind="mergesort").set_index("vertex")
 
-    def get_subgraph(self, threshold=0.5):
+    def get_subgraph(self, threshold=0.1):
         """
         Returns the induced subgraph
         """
