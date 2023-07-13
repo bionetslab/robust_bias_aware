@@ -89,4 +89,4 @@ For a large-scale empirical evaluation of ROBUST, please follow the instructions
 # Citing ROBUST
 
 Please cite ROBUST as follows:
-- J. Bernett, D. Krupke, S. Sadegh, J. Baumbach, S. P. Fekete, T. Kacprowski, M. List, D. B. Blumenthal: *Robust disease module mining via enumeration of diverse prize-collecting Steiner trees*, **Bioinformatics 38(6)**, pp. 1600-1606, https://doi.org/10.1093/bioinformatics/btab876.
+- S. Sarkar, M. Lucchetta, A. Maier, M. M. Abdrabbou, J. Baumbach, M. List, M. H. Schaefer, D. B. Blumenthal: *Online bias-aware disease module mining with ROBUST-Web*, **Bioinformatics 35(6)**, 26 May 2023, https://doi.org/10.1093/bioinformatics/btad345.
