@@ -1,8 +1,15 @@
 require(igraph)
 require(networkD3)
+require(optparse)
+
+option_list <- list(
+make_option(c("-n", "--network"), type = 'character',
+            help = "network file"))
+opt <- parse_args(OptionParser(option_list=option_list))
+
 
 g<-read_graph(
-  "covid.graphml",
+  opt$network,
   format ="graphml"
 )
 
