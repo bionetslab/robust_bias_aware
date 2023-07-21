@@ -72,16 +72,6 @@ python3 ./data/networks/update_inbuilt_ppi_networks.py
 python3 ./data/study_bias_scores/update_inbuilt_study_bias_scores.py
 ```
 
-# Result visualization
-We provide a very basic vizualization of the script in R which can be used to generate an html file with the network. We expect users to customize the network by coloring the nodes.
-
-Assuming you have executed the covid example above, you can call the script as follows. This will generate the a network file in the top level directory.
-
-(Depends on the packages igraph, networkD3, and optparse)
-```
-Rscript scripts/vizualize_network.R -n covid.graphml
-```
-
 # Evaluating ROBUST
 
 For a large-scale empirical evaluation of ROBUST, please follow the instructions given here: https://github.com/bionetslab/robust-eval.
