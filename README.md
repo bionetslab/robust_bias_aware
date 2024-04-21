@@ -76,7 +76,7 @@ python3 ./data/study_bias_scores/update_inbuilt_study_bias_scores.py
 
 For a large-scale empirical evaluation of ROBUST, please follow the instructions given here: https://github.com/bionetslab/robust-eval.
 
-# Citing ROBUST
+# Citing ROBUST-Web
 
 Please cite ROBUST as follows:
 - S. Sarkar, M. Lucchetta, A. Maier, M. M. Abdrabbou, J. Baumbach, M. List, M. H. Schaefer, D. B. Blumenthal: *Online bias-aware disease module mining with ROBUST-Web*, **Bioinformatics 35(6)**, 26 May 2023, https://doi.org/10.1093/bioinformatics/btad345.
